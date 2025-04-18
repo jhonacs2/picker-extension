@@ -1,0 +1,9 @@
+<div class="color-picker">
+  <div class="palette">
+    @for (color of colors; track $index) {
+      <div class="color" style="background-color:{{ color }}" (click)="selectColor(color)"></div>
+    }
+  </div>
+
+  <div class="selected-color" style="background: {{colorSelected|async}}" #selectedColorRef></div>
+</div>
